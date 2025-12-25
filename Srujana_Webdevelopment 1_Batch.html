@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quick Recipes</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background-color: skyblue;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .recipe {
+      background: whitesmoke;
+      width: 220px;
+      margin: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .details {
+      display: none;
+      text-align: left;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Click on a Recipe Image</h2>
+
+  <div class="container">
+
+    <!-- Maggi -->
+    <div class="recipe" onclick="toggleDetails('maggi')">
+      <h4>Maggi</h4>
+      <img src="maggi.jpeg">
+      <div class="details" id="maggi">
+        <b>Ingredients:</b>
+        <ul>
+          <li>Maggi noodles</li>
+          <li>Water</li>
+          <li>Masala</li>
+        </ul>
+        <b>Steps:</b>
+        <ol>
+          <li>Boil water</li>
+          <li>Add noodles & masala</li>
+          <li>Cook for 2 minutes</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Omelette -->
+    <div class="recipe" onclick="toggleDetails('omelette')">
+      <h4>Omelette</h4>
+      <img src="omlette.jpeg">
+      <div class="details" id="omelette">
+        <b>Ingredients:</b>
+        <ul>
+          <li>Eggs</li>
+          <li>Salt</li>
+          <li>Oil</li>
+        </ul>
+        <b>Steps:</b>
+        <ol>
+          <li>Beat eggs</li>
+          <li>Pour into pan</li>
+          <li>Cook well</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Bread Toast -->
+    <div class="recipe" onclick="toggleDetails('toast')">
+      <h4>Bread Toast</h4>
+      <img src="bread.jpeg">
+      <div class="details" id="toast">
+        <b>Ingredients:</b>
+        <ul>
+          <li>Bread</li>
+          <li>Butter</li>
+        </ul>
+        <b>Steps:</b>
+        <ol>
+          <li>Apply butter</li>
+          <li>Toast bread</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Fruit Salad -->
+    <div class="recipe" onclick="toggleDetails('salad')">
+      <h4>Fruit Salad</h4>
+      <img src="fruits.jpeg">
+      <div class="details" id="salad">
+        <b>Ingredients:</b>
+        <ul>
+          <li>Mixed fruits</li>
+        </ul>
+        <b>Steps:</b>
+        <ol>
+          <li>Chop fruits</li>
+          <li>Mix and serve</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Tea -->
+    <div class="recipe" onclick="toggleDetails('tea')">
+      <h4>Tea</h4>
+      <img src="tea.jpeg">
+      <div class="details" id="tea">
+        <b>Ingredients:</b>
+        <ul>
+          <li>Milk</li>
+          <li>Tea powder</li>
+          <li>Sugar</li>
+        </ul>
+        <b>Steps:</b>
+        <ol>
+          <li>Boil milk</li>
+          <li>Add tea powder</li>
+          <li>Serve hot</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+      var box = document.getElementById(id);
+      if (box.style.display === "block") {
+        box.style.display = "none";
+      } else {
+        box.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
